@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Membros da Pravda</title>
+<style>
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  background: radial-gradient(circle at top, #0a0a0a, #1a0000);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Título principal */
+h1 {
+  font-size: 48px;
+  color: #ff3b3b;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+  text-shadow: 0 0 15px #ff3b3b, 0 0 30px #b91c1c;
+}
+
+/* Lista de membros */
+.member-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cartão de cada membro */
+.member {
+  background: linear-gradient(145deg, #4c0000, #2b0000);
+  border: 2px solid #ff3b3b;
+  border-radius: 15px;
+  width: 220px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+/* Efeito hover nos membros */
+.member:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 25px #ff3b3b, 0 0 50px #b91c1c;
+}
+
+/* Imagem do membro */
+.member img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-bottom: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.member:hover img {
+  transform: rotate(-10deg) scale(1.1);
+  box-shadow: 0 0 20px #ff3b3b, 0 0 35px #b91c1c;
+}
+
+/* Nome do membro */
+.member h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px #ff3b3b;
+}
+
+/* Cargo do membro */
+.member p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #f2d9d9;
+  text-shadow: 0 0 5px #b91c1c;
+}
+</style>
+</head>
+<body>
+<h1>Membros Pravda</h1>
+<ul class="member-list">
+  <li class="member">
+    <img src="https://i.pinimg.com/564x/38/fa/a3/38faa3282dccf081eca9fe1a2ccd1938.jpg" alt="Tsumiki">
+    <h2>Tsumiki</h2>
+    <p>Líder e fundadora</p>
+  </li>
+  <li class="member">
+    <img src="https://media.discordapp.net/attachments/923560598401318942/1214414036494585938/8cf1141b435a672ea615c95871c73462.png" alt="Katsu">
+    <h2>Katsu</h2>
+    <p>Tester</p>
+  </li>
+  <li class="member">
+    <img src="https://images-ext-1.discordapp.net/external/8PkPN6jm3crj5u0Y4StVXscvA4LLlIdTBjfe0O9Y2ik/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/355388930624978945/058bead1457d853eb0714e8d616c4ef1.png?format=webp&quality=lossless" alt="Pity">
+    <h2>Pity</h2>
+    <p>General</p>
+  </li>
+  <li class="member">
+    <img src="https://media.discordapp.net/attachments/923560598401318942/1214412746683064341/4b59ef8ec032a0e4f2200160e68796ea.png" alt="Isvenpo">
+    <h2>Isvenpo</h2>
+    <p>Tester</p>
+  </li>
+  <li class="member">
+    <img src="https://media.discordapp.net/attachments/923560598401318942/1214412953735008317/4f1aa41832695bc7cb1361496f3d5398.png" alt="Yumui">
+    <h2>Yumui<3</h2>
+    <p>Tester</p>
+  </li>
+  <li class="member">
+    <img src="https://media.discordapp.net/attachments/923560598401318942/1214414627673481246/a9c32014262c2202946e34b1f29a8b6d.png" alt="Yamoshi">
+    <h2>Yamoshi</h2>
+    <p>Tester</p>
+  </li>
+</ul>
+</body>
+</html>
