@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Eventos - Pravda</title>
+<style>
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    background: radial-gradient(circle at top, #0a0a0a, #1a0000);
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Título principal */
+h1 {
+    font-size: 48px;
+    color: #ff3b3b;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #ff3b3b, 0 0 20px #b91c1c;
+    margin-bottom: 50px;
+}
+
+/* Container de eventos */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cartão de evento */
+.evento {
+    background: linear-gradient(145deg, #4c0000, #2b0000);
+    border: 2px solid #ff3b3b;
+    border-radius: 15px;
+    width: 300px;
+    padding: 15px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.evento:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 0 20px #ff3b3b, 0 0 40px #b91c1c;
+}
+
+/* Link do evento */
+.evento a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Imagem do evento */
+.evento img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.evento:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff3b3b, 0 0 25px #b91c1c;
+}
+
+/* Título do evento */
+.evento h2 {
+    font-size: 22px;
+    color: #ff3b3b;
+    margin-bottom: 5px;
+    text-shadow: 0 0 5px #ff3b3b;
+}
+
+/* Informações do evento */
+.evento p {
+    font-size: 14px;
+    color: #f2d9d9;
+    margin: 3px 0;
+}
+</style>
+</head>
+<body>
+<h1>Eventos Pravda</h1>
+<div class="container">
+    <div class="evento">
+        <a href="https://sites.google.com/view/pravdaclan/in%C3%ADcio/eventos/3x3-pravda">
+            <img src="https://i.imgur.com/0sCoHDP.jpeg" alt="3x3 Pravda">
+            <h2>3x3 Pravda</h2>
+        </a>
+        <p>Data: 13/07/22</p>
+        <p>Local: Fng 4</p>
+        <p>Evento finalizado</p>
+    </div>
+
+    <div class="evento">
+        <a href="https://sites.google.com/view/pravdaclan/in%C3%ADcio/eventos/world-fng-cup">
+            <img src="https://i.imgur.com/0ivAccG.png" alt="World Fng Cup">
+            <h2>World Fng Cup</h2>
+        </a>
+        <p>Data: 13/12/2022</p>
+        <p>Local: Fng 4</p>
+        <p>Evento finalizado</p>
+    </div>
+
+    <div class="evento">
+        <a href="https://sites.google.com/view/pravdaclan/in%C3%ADcio/eventos/fng-multiverse">
+            <img src="https://i.imgur.com/CoVh6cR.png" alt="Fng Multiverse 1">
+            <h2>Fng Multiverse</h2>
+        </a>
+        <p>Data: 02/02/2023</p>
+        <p>Local: A combinar</p>
+        <p>Evento finalizado</p>
+    </div>
+
+    <div class="evento">
+        <a href="https://sites.google.com/view/pravdaclan/in%C3%ADcio/eventos/fng-multiverse-2">
+            <img src="https://i.imgur.com/EKgu0dD.png" alt="Multiverse Fng 2">
+            <h2>Multiverse Fng 2</h2>
+        </a>
+        <p>Data: 22/11/23</p>
+        <p>Local: A combinar</p>
+        <p>Evento finalizado</p>
+    </div>
+
+    <div class="evento">
+        <a href="https://sites.google.com/view/pravdaclan/in%C3%ADcio/eventos/torneio-3x3">
+            <img src="https://i.imgur.com/2ctOM8U.png" alt="Torneio 3x3">
+            <h2>Torneio 3x3</h2>
+        </a>
+        <p>Data: 11/12/23</p>
+        <p>Local: Fng 4</p>
+        <p>Evento finalizado</p>
+    </div>
+
+    <div class="evento">
+        <a href="https://sites.google.com/view/pravdaclan/in%C3%ADcio/eventos/2x2-celestial">
+            <img src="https://i.imgur.com/kYcuwGA.png" alt="2x2 Celestial">
+            <h2>2x2 Celestial</h2>
+        </a>
+        <p>Data: 13/01/24</p>
+        <p>Local: Fng 1</p>
+        <p>Evento finalizado</p>
+    </div>
+
+    <div class="evento">
+        <a href="https://sites.google.com/view/pravdaclan/in%C3%ADcio/eventos/raio-gores">
+            <img src="https://i.imgur.com/PfLm9ae.gif" alt="Raio Gores">
+            <h2>Raio Gores</h2>
+        </a>
+        <p>Data: 03/03/24</p>
+        <p>Local: Gores Away</p>
+        <p>Evento finalizado</p>
+    </div>
+
+    <div class="evento">
+        <a href="#">
+            <img src="https://i.imgur.com/UgJKTFH.png" alt="Foot Camp Pravda">
+            <h2>Foot Camp Pravda</h2>
+        </a>
+        <p>Data: 16/02/24</p>
+        <p>Local: Foot Away</p>
+        <p>Evento finalizado</p>
+    </div>
+
+    <div class="evento">
+        <a href="#">
+            <img src="https://i.imgur.com/URJPHD8.gif" alt="Infclass lotado">
+            <h2>Infclass lotado</h2>
+        </a>
+        <p>Data: 23/04/24</p>
+        <p>Local: Inflcass Pravda</p>
+        <p>Evento finalizado</p>
+    </div>
+
+    <div class="evento">
+        <a href="#">
+            <img src="https://i.imgur.com/fEDLrK8_d.webp?maxwidth=760&fidelity=grand" alt="Volley DDNet">
+            <h2>Volley DDNet</h2>
+        </a>
+        <p>Data: 06/04/24</p>
+        <p>Local: DDRace Brazil</p>
+        <p>Evento finalizado</p>
+    </div>
+
+    <div class="evento">
+        <a href="#">
+            <img src="https://i.imgur.com/JfWI8Vs.png" alt="Casamento Oi & Chrome">
+            <h2>Casamento Oi & Chrome</h2>
+        </a>
+        <p>Data: 09/04/24</p>
+        <p>Local: DDRace Brazil</p>
+        <p>Evento finalizado</p>
+    </div>
+</div>
+</body>
+</html>
