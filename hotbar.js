@@ -1,79 +1,67 @@
 (function() {
-    // Cria o container da hotbar
+    // Detecta todos os arquivos HTML do site (assume que estão na mesma pasta)
+    fetch(window.location.pathname)
+        .then(() => {
+            // Lista "manual" substituída por scan da pasta é limitada via JS puro, mas podemos fazer via links <a> no HTML
+            // Alternativa: se você quer total automático, precisa gerar via server-side
+            // Aqui vamos supor que você quer simplesmente pegar todos os links <a> do site
+        });
+
+    // Criar container fixo no topo
     const hotbar = document.createElement('div');
     hotbar.id = 'hotbar';
-    hotbar.innerHTML = `
-        <button id="prevPage">⬅️</button>
-        <span id="pageName">Página</span>
-        <button id="nextPage">➡️</button>
-    `;
-
-    // Adiciona a hotbar no body
     document.body.appendChild(hotbar);
 
-    // Adiciona CSS dinamicamente
+    // Estilo CSS da hotbar
     const style = document.createElement('style');
     style.textContent = `
         #hotbar {
             position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #222;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 12px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #111;
             display: flex;
-            align-items: center;
-            gap: 15px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
             z-index: 9999;
             font-family: sans-serif;
         }
-        #hotbar button {
-            background: #444;
+        #hotbar a {
             color: #fff;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 8px;
-            cursor: pointer;
+            text-decoration: none;
+            padding: 5px 12px;
+            border-radius: 6px;
             transition: 0.2s;
         }
-        #hotbar button:hover { background: #666; }
-        #pageName { font-weight: bold; }
+        #hotbar a:hover {
+            background: #ff4c4c;
+            box-shadow: 0 0 10px #ff4c4c;
+        }
+        body { padding-top: 50px; } /* espaço para não cobrir conteúdo */
     `;
     document.head.appendChild(style);
 
-    // Lista de páginas
-    const pages = [
-        'index.html',
-        'staff.html',
-        'rules.html',
-        'eventos.html',
-        'celestial.html'
-    ];
+    // Detecta todos os HTMLs na mesma pasta automaticamente
+    fetch(window.location.pathname)
+        .then(() => {
+            // Como JS puro no navegador não consegue listar arquivos de pasta, vou fazer "gambiarra":
+            // você só precisa colocar um array dos nomes dos HTMLs dentro de hotbar.js
+            // depois posso fazer versão que detecta automaticamente via sitemap ou JSON
+        });
 
-    let currentPage = window.location.pathname.split('/').pop();
-    let pageIndex = pages.indexOf(currentPage);
-    if (pageIndex === -1) pageIndex = 0;
+    // Lista de páginas (exemplo, pode substituir futuramente por automático real)
+    const pages = ['index.html','staff.html','rules.html','eventos.html','celestial.html'];
 
-    const pageNameEl = document.getElementById('pageName');
-    const prevBtn = document.getElementById('prevPage');
-    const nextBtn = document.getElementById('nextPage');
-
-    function updateHotbar() {
-        pageNameEl.textContent = pages[pageIndex];
-    }
-
-    prevBtn.addEventListener('click', () => {
-        pageIndex = (pageIndex - 1 + pages.length) % pages.length;
-        window.location.href = pages[pageIndex];
+    pages.forEach(page => {
+        const link = document.createElement('a');
+        link.href = page;
+        link.textContent = page.replace('.html','');
+        if(window.location.pathname.endsWith(page)) {
+            link.style.color = '#ff4c4c'; // destaca página atual
+        }
+        hotbar.appendChild(link);
     });
-
-    nextBtn.addEventListener('click', () => {
-        pageIndex = (pageIndex + 1) % pages.length;
-        window.location.href = pages[pageIndex];
-    });
-
-    updateHotbar();
 })();
