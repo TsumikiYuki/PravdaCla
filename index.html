@@ -127,6 +127,88 @@
                 font-size: 2rem;
             }
         }
+
+        <!-- hotbar.html incluído -->
+<div id="hotbar">
+  <button id="prevPage">⬅️</button>
+  <span id="pageName">Página</span>
+  <button id="nextPage">➡️</button>
+</div>
+
+<style>
+  #hotbar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    z-index: 9999;
+    font-family: sans-serif;
+  }
+
+  #hotbar button {
+    background: #444;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  #hotbar button:hover {
+    background: #666;
+  }
+
+  #pageName {
+    font-weight: bold;
+  }
+</style>
+
+<script>
+  (function(){
+    // Lista de páginas do site
+    const pages = [
+      'index.html',
+      'staff.html',
+      'rules.html',
+      'eventos.html',
+      'celestial.html'
+    ];
+
+    let currentPage = window.location.pathname.split('/').pop();
+    let pageIndex = pages.indexOf(currentPage);
+    if(pageIndex === -1) pageIndex = 0;
+
+    const pageNameEl = document.getElementById('pageName');
+    const prevBtn = document.getElementById('prevPage');
+    const nextBtn = document.getElementById('nextPage');
+
+    function updateHotbar() {
+      pageNameEl.textContent = pages[pageIndex].replace('.html','');
+    }
+
+    prevBtn.addEventListener('click', () => {
+      pageIndex = (pageIndex - 1 + pages.length) % pages.length;
+      window.location.href = pages[pageIndex];
+    });
+
+    nextBtn.addEventListener('click', () => {
+      pageIndex = (pageIndex + 1) % pages.length;
+      window.location.href = pages[pageIndex];
+    });
+
+    updateHotbar();
+  })();
+</script>
+
     </style>
 </head>
 <body>
