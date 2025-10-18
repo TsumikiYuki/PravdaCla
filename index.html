@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pravda Clan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
+            color: #fff;
+        }
+
+        header {
+            position: relative;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            background-color: #0f0f0f;
+        }
+
+        header img.background-cat {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: auto;
+            opacity: 0.2;
+        }
+
+        header .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8));
+        }
+
+        header h1 {
+            position: relative;
+            font-size: 3rem;
+            color: #ff4c4c;
+            text-shadow: 0 0 15px #ff4c4c;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            position: relative;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .cherry-blossoms {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAA...');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        main {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        main h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ff4c4c;
+        }
+
+        main p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #ccc;
+        }
+
+        .cta-button {
+            background-color: #ff4c4c;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            background-color: #e63b3b;
+            box-shadow: 0 0 20px #ff4c4c;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            main h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img class="background-cat" src="/mnt/data/110951bb-3b63-4895-85e9-e9e9f474d138.png" alt="Gato Pravda">
+        <div class="overlay"></div>
+        <h1>Pravda</h1>
+        <p>Bem-vindo ao servidor do clan PRAVDA</p>
+    </header>
+
+    <main>
+        <h2>Bem-vindo à Pravda</h2>
+        <p>Um clan com o objetivo de criar uma comunidade que reúne todos jogadores</p>
+        <a href="#" class="cta-button">Seja um Guerreiro Pravda</a>
+    </main>
+
+    <footer>
+        &copy; 2025 Clan Pravda. Todos os direitos reservados.
+    </footer>
+
+</body>
+</html>
